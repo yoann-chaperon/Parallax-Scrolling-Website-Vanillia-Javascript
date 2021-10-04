@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Scrolling Website / Vanillia Javascript</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+<section>
+    <img src="img/star.png" alt="star" id="star">
+    <img src="img/moon.png " alt="moon" id="moon">
+    <img src="img/montagne_2.png" alt="montagne_2" id="montagne_2">
+    <h2 id="text" >Moon light</h2>
+    <a href= "#sec" id="btn" >explore</a>
+    <img src="img/montagne.png" alt="montagne_1" id="montagne">
+</section>
+<div class="sec" id="sec">
+    <h2>Parallax Scrolling effects</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut amet, veniam adipisci rerum quos sunt id minima magni. Corrupti veniam eum nulla sunt fuga, omnis optio enim unde mollitia fugiat!
+    A voluptatum deserunt esse nam mollitia quae molestias deleniti doloribus, aspernatur quibusdam repellendus unde accusamus reprehenderit excepturi repellat. Expedita nulla impedit velit doloremque illum sunt nobis mollitia accusantium architecto facilis!<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et provident corrupti officiis repellat delectus doloremque eos, explicabo esse eveniet iure recusandae expedita. Molestias possimus recusandae dolores nemo minus labore voluptates.
+    Omnis quia nisi ducimus ipsum molestiae iusto porro enim voluptatem, accusamus repellendus. Quidem quod laborum dolorum eveniet explicabo illum saepe ex delectus hic quia deserunt, cupiditate aliquam deleniti assumenda porro.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi at consequuntur esse? Dolorem cumque adipisci obcaecati beatae, vel, quia commodi voluptatem quidem libero ipsum asperiores, similique natus necessitatibus voluptatibus!
+    Illum similique dicta iure animi quisquam vitae sed amet assumenda accusantium maiores, aliquid corrupti necessitatibus architecto. Doloribus ipsa cupiditate, a, sed tempora ullam possimus, sequi corrupti aspernatur eius rerum ipsum.<br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam aliquid sequi nulla rem eaque recusandae similique consectetur at eveniet. Numquam nemo perferendis eveniet fuga, nulla voluptatibus voluptates amet itaque magni!
+    Impedit quidem illum explicabo esse ex repudiandae odio eum magnam! Cumque facilis dolor eveniet adipisci dolores quaerat atque dolorem illum at, molestias eius, distinctio, sapiente ex deleniti maxime nemo expedita?
+    Facilis dicta tempore ullam delectus ducimus voluptate, molestiae cupiditate asperiores facere vel nesciunt maxime nihil eius. Iusto mollitia harum similique qui voluptates doloremque, pariatur quaerat aliquam, quae laudantium voluptatem perferendis.</p>
+</div>
+<script>
+    let star = document.getElementById('star');
+    let moon = document.getElementById('moon');
+    let montagne_2 = document.getElementById('montagne_2');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let montagne = document.getElementById('montagne');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        star.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        montagne_2.style.top = value * 1.5 + 'px';
+        montagne.style.top = value * 0.1 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.8 + 'px';
+        header.style.marginTop = value * .5 + 'px';
+    })
+</script>
+</body>
+
+</html>
